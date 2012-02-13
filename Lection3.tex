@@ -1,0 +1,44 @@
+\documentclass[oneside, final, 14pt]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\setpapersize{A4}
+\setmarginsrb{2cm}{1.5cm}{1cm}{1.5cm}{0pt}{0mm}{0pt}{13mm}
+\usepackage{indentfirst}
+\sloppy
+\begin{document}
+Лекция 07.02.2012
+\section{Параграф 4:} 
+\bfseries
+Метод квадратного корня
+\\
+\normalfont
+Рассмотрим систему \begin{equation}Ax=f,\end{equation} где A-эрмитова невырожденная матрица.
+\\
+По определению: \(a_{i,j}=\bar a_{j,i}\), \(A=A^{*}\), \(\mid A \mid \neq 0, A(m,m)\).
+\\Сузив класс, мы должны получить более сильный результат.
+\\Факторизуем матрицу A более хитрым способом в виде \(A=S^{*}DS\)
+\\ 
+\(D=\begin{bmatrix} d_{1,1} & 0 & 0 & \ldots & 0 & 0 & 0 \\ 0 & d_{2,2} & 0  & \ldots & 0 & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & 0 & 0 & \ldots & 0 & 0 & d_{m,m} \end{bmatrix} \), \(d_{i,i}=\pm 1\)
+\\
+\(S=\begin{bmatrix} s_{1,1} & s_{2,2} & \ldots & s_{1,m} \\ 0 & s_{2,1} & \ldots & s_{2,m} \\ \ldots & \ldots & \ldots & \ldots \\ 0 & 0 & \ldots & s_{m,m} \end{bmatrix}, \; S_{i,i}>0, \; i=1,2, \ldots, m \)
+\\
+Пусть \( A=\begin{bmatrix} a_{1,1} & a_{1,2} \\ a_{1,2} & a_{2,2} \end{bmatrix}\),  
+\(D=\begin{bmatrix} d_{1,1} & 0 \\ 0 & d_{2,2} \end{bmatrix}\), 
+\(S= \begin{bmatrix} s_{1,1} & s_{1,2} \\ 0 & s_{2,2} \end{bmatrix}\).  
+\\
+\(S^{*}=S^{T}=\begin{bmatrix} s_{1,1} & 0 \\ s_{1,2} & s_{2,2} \end{bmatrix} \)
+\\
+Тогда \( DS=\begin{bmatrix} d_{1,1} & 0 \\ 0 & d_{2,2} \end{bmatrix}  \begin{bmatrix} s_{1,1} & s{1,2}\\ 0 & s_{2,2}\end{bmatrix}=\begin{bmatrix}d_{1,1}s_{1,1} & d_{1,1}s_{1,2} \\ 0 & d_{2,2}s_{2,2} \end{bmatrix}\)
+\\
+\(S_{*}DS=\begin{bmatrix} s_{1,1} & 0 \\ s_{1,2} & s_{2,2}\end{bmatrix} \begin{bmatrix} d_{1,1}s_{1,1} & d_{1,1}s_{1,2} \\ 0 & d_{2,2}s_{2,2}\end{bmatrix} = \)
+\( \begin{bmatrix} d_{1,1}s_{1,1}^2 & s_{1,1}d_{1,1}s_{1,2} \\ s_{1,1}d_{1,1}s_{1,2} & d_{2,2}s_{2,2}^2 \end{bmatrix} \Rightarrow\)
+
+\[  \left\{\begin{aligned} & a_{1,1}=d_1s_{1,1}^2 \\ & a_{1,2}=s_{1,1}d_{1,1}s_{1,2} \\ & a_{2,2}=d_{2,2}s_2^2\end{aligned}\right. \]
+\[\Rightarrow d_{1,1}=sign\;a_{1,1} \rightarrow s_{1,1}=\sqrt{ \mid a_{1,1} \mid }  \]
+\[\Rightarrow s_{1,2}=\frac{a_{1,2}}{s_{1,1}d_{1,1}} \rightarrow d_{2,2}= sign \; a_{2,2} \]
+\[\Rightarrow s_{2,2}=\sqrt{\mid a_{2,2}\mid}\]
+\\
+Для факторизации матрицы система должна быть разрешима.
+\end{document}
